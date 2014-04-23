@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:baselineAligned="false">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_restart"
+        android:src="@android:drawable/ic_delete"
+        android:background="@android:color/transparent" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="false">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Bar le duc"
+            android:id="@+id/txt_e2"
+            android:layout_alignParentRight="true" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:text="1"
+            android:id="@+id/bt_but1"
+            android:layout_marginTop="29dp"
+            android:background="#dcedff"
+            android:textSize="85dp"
+            android:layout_toLeftOf="@+id/bt_stop"
+            android:layout_alignParentLeft="true"
+            android:focusable="false"
+            android:singleLine="false"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:text="0"
+            android:id="@+id/bt_but2"
+            android:layout_alignTop="@+id/bt_but1"
+            android:background="#dcedff"
+            android:textSize="85dp"
+            android:layout_alignParentRight="true"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop chrono"
+            android:id="@+id/bt_stop"
+            android:layout_below="@+id/chrono"
+            android:layout_centerHorizontal="true" />
+
+        <Chronometer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chrono"
+            android:layout_centerHorizontal="true"
+            android:textSize="100px"
+            android:layout_below="@+id/bt_start_2nd" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Carton"
+            android:id="@+id/bt_carton"
+            android:layout_alignTop="@+id/bt_stop"
+            android:layout_toLeftOf="@+id/bt_stop"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Remplacement"
+            android:id="@+id/bt_remplacement"
+            android:layout_alignTop="@+id/bt_stop"
+            android:layout_toRightOf="@+id/bt_stop"
+            android:layout_alignParentRight="true" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listE"
+            android:layout_alignParentBottom="true"
+            android:background="#d2e2f4"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/bt_stop"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Strasbourg"
+            android:id="@+id/txt_e1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Commencer le match"
+            android:id="@+id/bt_start_chrono"
+            android:layout_below="@+id/bt_but1"
+            android:layout_toRightOf="@+id/bt_but1"
+            android:layout_toLeftOf="@+id/bt_but2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Commencer 2nd mi-temps"
+            android:id="@+id/bt_start_2nd"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/bt_start_chrono"
+            android:layout_toLeftOf="@+id/bt_but2"
+            android:layout_toRightOf="@+id/bt_but1" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/prog_mitemps"
+            android:layout_below="@+id/txt_e1"
+            android:layout_centerHorizontal="true"
+            android:indeterminate="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Mi temps"
+            android:id="@+id/txt_mitemps"
+            android:layout_above="@+id/bt_start_chrono"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/prog_mitemps" />
+
+    </RelativeLayout>
+</LinearLayout>

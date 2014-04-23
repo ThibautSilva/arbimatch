@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent">
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <RadioGroup
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/radioGroup">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_retour"
+            android:src="@android:drawable/ic_delete"
+            android:background="@android:color/transparent" />
+
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Carton rouge"
+            android:id="@+id/rb_rouge"
+            android:checked="true"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="47dp"
+            android:layout_marginBottom="14dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carton jaune "
+            android:id="@+id/rb_jaune"
+            android:layout_below="@+id/rb_rouge"
+            android:layout_alignParentLeft="true"
+            android:checked="false" />
+    </RadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Ajouter un carton"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Joueur :"
+            android:id="@+id/textView2"
+            android:layout_marginTop="31dp"
+            android:layout_below="@+id/radioGroup"
+            android:layout_alignParentLeft="true" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listJoueur"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:background="#d4eaff" />
+
+    </RelativeLayout>
+</LinearLayout>
